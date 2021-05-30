@@ -1,7 +1,6 @@
 # EmployeeReport
 
-
-https://codingdojo.org/kata/Employee-Report/
+kata from https://codingdojo.org/kata/Employee-Report/
 
 **TODO: Add description**
 
