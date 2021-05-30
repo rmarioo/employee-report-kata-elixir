@@ -13,5 +13,12 @@ defmodule EmployeeReport do
     @employees
   end
 
+  def youngEmployees() do
+
+    for emp <- @employees, emp.age < 18, do: emp
+
+  end
+
+
 
 end

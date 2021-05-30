@@ -13,5 +13,12 @@ defmodule EmployeeReportTest do
              ]
     end
 
+    test "I want to view a list of all employees younger than 18" do
+      assert EmployeeReport.youngEmployees() == [
+               %Employee{age: 15, name: "Luigino"},
+               %Employee{name: "Gigino", age: 17}
+             ]
+    end
+
   end
 end
