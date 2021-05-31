@@ -39,7 +39,7 @@ defmodule EmployeeReportTest do
     end
 
     test "I want the list of employees to be capitalized, so I can read it better" do
-      assert EmployeeReport.allCapitalized() == [
+      assert EmployeeReport.allCapitalized == [
                %Employee{age: 15, name: "Luigino"},
                %Employee{age: 40, name: "Sergione"},
                %Employee{name: "Marco", age: 23},
