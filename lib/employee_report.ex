@@ -19,6 +19,10 @@ defmodule EmployeeReport do
 
   end
 
+  def employeesSortByName do
+    Enum.sort(@employees, fn x,y -> x.name < y.name end)
+  end
+
 
 
 end

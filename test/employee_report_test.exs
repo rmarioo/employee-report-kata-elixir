@@ -20,5 +20,14 @@ defmodule EmployeeReportTest do
              ]
     end
 
+    test "I want the list of employees to be sorted by their name, so I can find employees easier." do
+      assert EmployeeReport.employeesSortByName() == [
+               %Employee{name: "Gigino", age: 17},
+               %Employee{name: "Luigino", age: 15},
+               %Employee{name: "Marco", age: 23},
+               %Employee{name: "Sergione", age: 40}
+            ]
+    end
+
   end
 end
