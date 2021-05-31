@@ -29,12 +29,39 @@ defmodule EmployeeReportTest do
             ]
     end
 
+    test "I want the employees to be sorted by their names descending instead of ascending" do
+      assert EmployeeReport.employeesSortByNameDescending() == [
+               %Employee{name: "sergione", age: 40},
+               %Employee{name: "marco", age: 23},
+               %Employee{name: "luigino", age: 15},
+               %Employee{name: "gigino", age: 17}
+             ]
+    end
+
     test "I want the list of employees to be capitalized, so I can read it better" do
       assert EmployeeReport.allCapitalized() == [
                %Employee{age: 15, name: "Luigino"},
                %Employee{age: 40, name: "Sergione"},
                %Employee{name: "Marco", age: 23},
                %Employee{name: "Gigino", age: 17}
+             ]
+    end
+
+
+    test "I want the list of employees capitalized andsorted by their name, so I can find employees easier." do
+      assert EmployeeReport.employeesCapitalizedAndSortByName() == [
+               %Employee{name: "Gigino", age: 17},
+               %Employee{name: "Luigino", age: 15},
+               %Employee{name: "Marco", age: 23},
+               %Employee{name: "Sergione", age: 40}
+             ]
+    end
+
+    test "I want the list of young employees capitalized andsorted by their name, so I can find
+    employees easier." do
+      assert EmployeeReport.youngEmployeesCapitalizedAndSortByName() == [
+               %Employee{name: "Gigino", age: 17},
+               %Employee{name: "Luigino", age: 15}
              ]
     end
 
